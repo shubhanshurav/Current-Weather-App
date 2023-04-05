@@ -169,8 +169,7 @@ async function fetchUserWeatherInfo(coordinates){
     }
     catch(err){
         loadingScreen.classList.remove("active");
-
-        //homework
+        notFound.classList.add('active');
     }
 }
 
@@ -204,6 +203,7 @@ function getLocation(){
         navigator.geolocation.getCurrentPosition(showPosition);
     }else{
          //Homework -> Shoe alert for no geolocation support avialaible
+         alert("Search City Name only");
 
     }
 }
@@ -240,14 +240,14 @@ async function fetchSearchWeatherInfo(city){
 
     try{
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
         );
         const data = await response.json();
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
 
-    }
+    }  
     catch(err){
             //homework
     }
