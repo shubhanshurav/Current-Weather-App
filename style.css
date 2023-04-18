@@ -16,24 +16,36 @@
 
 .wrapper{
     width: 100vw;
-    height: 100vh;
-    color: var(--colorLight2);
-    background-image: linear-gradient(160deg, #112d4e 0%,#3f72af 100%);
+    height: 130vh;
+    /* color: var(--colorLight2); */
+    /* background-image: linear-gradient(160deg, #112d4e 0%,#3f72af 100%); */
+    /* background-color: #1478aa; */
+    background-image: url('./assets/background.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 h1{
     text-align: center;
     text-transform: uppercase;
     padding-top: 20px;
+    color: #000000;
 }
 
 .tab-container{
     width: 90%;
     max-width: 550px;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+}
+
+.tab-container p{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .tab{
@@ -44,12 +56,12 @@ h1{
 }
 
 .tab.current-tab{
-     background-color: rgba(219, 226, 239, 0.5);
+     background-color: #ffffffd5;
      border-radius: 4px;
 }
 
 .weather-container{
-    margin-block: 4rem;
+    margin-block: 3rem;
 }
 
 .btn{
@@ -125,7 +137,7 @@ h1{
 }
 
 .user-info-container p{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 200;
 }
 
@@ -136,6 +148,8 @@ h1{
 
 .name p{
     font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
 }
 
 .name img{
@@ -150,7 +164,7 @@ h1{
 }
 
 .parameter-container{
-    width: 30%;
+    width: 50%;
     display: flex;
     gap: 10px 20px;
     justify-content: center;
@@ -161,7 +175,8 @@ h1{
 .parameter{
     width: 30%;
     max-width: 200px;
-    background-color: rgba(219, 226, 239, 0.5);
+    background-color: #F9F7F7;
+    opacity: 0.8;
     border-radius: 5px;
     padding: 1rem;
     display: flex;
@@ -210,7 +225,7 @@ h1{
     width: calc(100% - 80px);
     height: 40px;
     padding: 0 20px;
-    background-color: rgba(219, 226, 239, 0.5);
+    background-color: rgba(122, 124, 128, 0.5);
     border-radius: 10px;
 }
 
